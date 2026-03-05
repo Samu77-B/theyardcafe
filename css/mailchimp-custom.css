@@ -1,0 +1,100 @@
+/* Custom Mailchimp Popup Positioning for The Yard Cafe
+   This ensures the popup appears lower on the page, preserving the logo and navigation */
+   
+/* Mobile-specific fixes */
+@media only screen and (max-width: 767px) {
+    /* Fix email input field display on mobile */
+    .mc-field-group,
+    .mc_embed_signup .mc-field-group,
+    input.email,
+    input[name="EMAIL"],
+    input[type="email"],
+    .mc_embed_signup input.email {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: 44px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 10px 0 !important;
+        padding: 8px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 4px !important;
+        font-size: 16px !important; /* Prevent iOS zoom */
+        box-sizing: border-box !important;
+    }
+    
+    /* Position the popup properly on mobile */
+    .mc-modal-bg,
+    .mc-modal,
+    .mc-layout__modalContainer,
+    .mc-layout__modalContent {
+        width: 90% !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        position: fixed !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+    
+    /* Fix form label visibility */
+    .mc_embed_signup label,
+    #mc_embed_signup label {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-bottom: 5px !important;
+    }
+    
+    /* Ensure popup appears above other content */
+    .mc-modal, .mc-banner {
+        z-index: 9998 !important; /* Just below mobile menu */
+    }
+    
+    /* Fix email address label */
+    label[for="mce-EMAIL"],
+    #mce-EMAIL-label {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-bottom: 5px !important;
+        font-weight: bold !important;
+    }
+}
+
+/* Position popup lower on the page */
+.mc-layout__modalContainer {
+    margin-top: 120px !important;
+    align-items: flex-start !important;
+}
+
+/* Ensure main site elements remain visible */
+.mc-banner {
+    top: 120px !important;
+}
+
+/* Maintain site structure - prevent popup from moving content */
+body.mc-modal-open {
+    position: static !important;
+    overflow: auto !important;
+}
+
+/* Ensure the site logo stays visible */
+.brand, .w-nav-brand {
+    z-index: 2000 !important;
+    position: relative !important;
+}
+
+/* Keep z-index lower than mobile menu (9999) but high enough to be visible */
+.mc-modal {
+    z-index: 2500 !important;
+}
+
+/* Make modal background semi-transparent instead of fully opaque */
+.mc-layout__modalBackdrop {
+    background-color: rgba(0,0,0,0.6) !important;
+}

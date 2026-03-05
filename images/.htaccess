@@ -1,0 +1,37 @@
+# ==============================================================================
+# Enhanced Security .htaccess for images/ Directory
+# ==============================================================================
+
+# Disable directory browsing
+Options -Indexes
+
+# Explicitly allow all image files
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|ico|JPG|JPEG|PNG|GIF|SVG|WEBP|ICO)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
+
+# Block any non-image files from being executed
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|php8|phps|phar|js|jsp|asp|aspx|cgi|pl|py|rb|sh|html|htm|exe|bat|cmd)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Security headers for images
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    # Cache images for better performance
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|ico)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+</IfModule>

@@ -1,0 +1,57 @@
+/* Custom styling for location maps */
+.location-maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.location-map-container {
+  flex: 1 1 400px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.location-map-container h3 {
+  font-family: Dahot, sans-serif;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+  font-size: 28px;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+}
+
+.map-container iframe {
+  display: block;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .location-maps {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .location-map-container {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+  
+  .map-container iframe {
+    height: 350px;
+  }
+}

@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Allow all bots to access all content
+Disallow: /includes/
+Disallow: /js/load-*.js
+
+# AI Search Engine Optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.theyardcafe.co.uk/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1

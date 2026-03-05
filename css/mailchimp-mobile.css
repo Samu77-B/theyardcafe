@@ -1,0 +1,184 @@
+/* Mailchimp Mobile Responsiveness */
+
+/* Base popup styles for mobile */
+.mc-modal-bg, 
+.mc-modal, 
+.mc-layout__modalContainer,
+.mc-banner,
+.mc-layout__bannerContainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    left: 0 !important;
+    margin: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    position: fixed !important;
+    box-sizing: border-box !important;
+}
+
+/* Modal content container */
+.mc-layout__modalContent,
+.mc-banner-content {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    border-radius: 8px !important;
+}
+
+/* Form fields on mobile */
+.mc-field-group,
+.mc-embedded-form .mc-field-group,
+.mc-form-group,
+.mc-field-group input,
+.mc-field-group select,
+input.email,
+div.mc_embed_signup input.email,
+.mc-input {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 5px 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Subscribe button */
+.mc-submit-button, 
+.button {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    height: auto !important;
+    border-radius: 4px !important;
+}
+
+/* Close button */
+.mc-closeModal,
+.mc-modal-close,
+.mc-banner-close {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 20px !important;
+    padding: 0 !important;
+    line-height: 30px !important;
+    text-align: center !important;
+    z-index: 99999 !important;
+    background: rgba(255,255,255,0.2) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+}
+
+/* Make sure text is readable */
+.mc-layout__modalContent h3,
+.mc-banner-content h3 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    margin: 0 0 10px !important;
+}
+
+.mc-layout__modalContent p,
+.mc-banner-content p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 15px !important;
+}
+
+/* Add touch-friendly tap targets */
+.mc-field-group input,
+.mc-field-group select,
+.mc-submit-button,
+.button {
+    min-height: 44px !important; /* Apple's recommended minimum tap target size */
+}
+
+/* Add media queries for different mobile sizes */
+@media only screen and (max-width: 480px) {
+    .mc-layout__modalContent,
+    .mc-banner-content {
+        width: 95% !important;
+        padding: 10px !important;
+    }
+}
+
+/* Form visibility fixes for mobile */
+.mc-form,
+.mc-embedded-subscribe-form,
+.mc_embed_signup,
+.mc_embed_signup form,
+#mc_embed_signup,
+#mc_embed_signup form,
+.mc-input-container,
+.mc-field-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+}
+
+/* Override any hidden styles that might be applied to form elements */
+[class*="mc-"] input,
+[class*="mc-"] button,
+[class*="mc-"] select,
+[class*="mc-"] textarea,
+[class*="mc-"] form,
+[class*="mc-"] label,
+[class*="mc-"] .checkbox-group,
+[class*="mc_"] input,
+[class*="mc_"] button,
+[class*="mc_"] select,
+[class*="mc_"] textarea,
+[class*="mc_"] form,
+[class*="mc_"] label,
+[class*="mc_"] .checkbox-group {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+}
+
+/* Additional styles to ensure form is responsive */
+.mc_embed_signup .indicates-required,
+.mc-embedded-form .indicates-required {
+    margin-bottom: 10px !important;
+    font-size: 12px !important;
+}
+
+/* Label styling */
+.mc-label,
+.mc_embed_signup label,
+.mc-embedded-form label {
+    display: block !important;
+    font-size: 14px !important;
+    padding-bottom: 5px !important;
+    font-weight: bold !important;
+}
+
+/* Fix for checkbox inputs */
+.checkbox-group,
+.mc-checkbox-group,
+.mc_embed_signup .mc-field-group input[type=checkbox],
+.mc-embedded-form .mc-field-group input[type=checkbox] {
+    width: auto !important;
+    display: inline-block !important;
+    margin-right: 5px !important;
+    min-height: auto !important;
+}
+
+/* Fix z-index to ensure popup appears over everything */
+.mc-modal-bg, 
+.mc-layout__modalBackdrop {
+    z-index: 99999 !important;
+}

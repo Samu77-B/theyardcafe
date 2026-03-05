@@ -1,0 +1,110 @@
+/**
+ * Styles for local events with Stripe payment integration
+ * The Yard Cafe website
+ */
+
+.local-events-integration {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  text-align: left;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.event-listing {
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+}
+
+.event-listing:hover {
+  transform: translateY(-5px);
+}
+
+.event-listing h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #c1272d;
+  text-align: left;
+}
+
+.event-listing p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: left !important;
+}
+
+.payment-options {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: left;
+}
+
+.stripe-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: normal;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.stripe-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.payment-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Hide Spanish Wine Tasting event */
+[id*='wine-tasting-supper-club'],
+[id*='wine-tasting'] iframe,
+div:has(> h1:contains('A WINE TASTING SUPPER CLUB THROUGH SPAIN')),
+div:has(> h2:contains('A WINE TASTING SUPPER CLUB THROUGH SPAIN')),
+div:has(> h3:contains('A WINE TASTING SUPPER CLUB THROUGH SPAIN')),
+div:has(> h4:contains('A WINE TASTING SUPPER CLUB THROUGH SPAIN')),
+div:has(> p:contains('A WINE TASTING SUPPER CLUB THROUGH SPAIN')),
+div[id*='cognitoform']:has(div:contains('wine tasting supper club')),
+iframe[src*='cognitoforms']:has(div:contains('wine tasting')),
+div:has(img[alt*='wine tasting supper club']),
+div:has(img[src*='wine-tasting']) {
+  display: none !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .events-container {
+    gap: 15px;
+  }
+  
+  .event-listing {
+    padding: 15px;
+  }
+  
+  .stripe-button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

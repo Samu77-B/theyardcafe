@@ -1,0 +1,183 @@
+# ==============================================================================
+# Enhanced Security .htaccess Configuration
+# The Yard Café Website
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. PREVENT CROSS-SITE CONTAMINATION (Symlink Protection)
+# ------------------------------------------------------------------------------
+Options -FollowSymLinks
+Options +SymLinksIfOwnerMatch
+
+# ------------------------------------------------------------------------------
+# 2. DISABLE DIRECTORY BROWSING
+# ------------------------------------------------------------------------------
+Options -Indexes
+
+# ------------------------------------------------------------------------------
+# 3. PROTECT SENSITIVE FILES AND CONFIGURATION
+# ------------------------------------------------------------------------------
+<FilesMatch "^(\.htaccess|\.htpasswd|\.env|\.git|\.gitignore|\.gitattributes|composer\.json|composer\.lock|package\.json|package-lock\.json|yarn\.lock|\.DS_Store|Thumbs\.db|\.svn|\.idea|\.vscode|\.editorconfig|\.eslintrc|\.prettierrc|\.npmrc|\.yarnrc|\.log|error_log|access_log|php\.ini|\.user\.ini)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Protect PHP files (if any exist)
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|php8|phps|phar)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ------------------------------------------------------------------------------
+# 4. BLOCK MALICIOUS SCRIPT INJECTIONS AND ATTACK PATTERNS
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Allow images, CSS, JS, and fonts to bypass security checks
+    RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|otf|eot)$ [NC]
+    
+    # Block malicious query strings (SQL injection, XSS, etc.)
+    RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} proc/self/environ [OR]
+    RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+    RewriteCond %{QUERY_STRING} base64_(en|de)code\(.*\) [OR]
+    RewriteCond %{QUERY_STRING} (<|%3C).*iframe.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (<|%3C).*object.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (<|%3C).*embed.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (;|\'|\"|%22).*(union|select|insert|drop|update|md5|benchmark|or|and) [NC,OR]
+    RewriteCond %{QUERY_STRING} (localhost|loopback|127\.0\.0\.1) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\.\./|\.\.\\) [OR]
+    RewriteCond %{QUERY_STRING} (boot\.ini|etc/passwd|self/environ) [NC,OR]
+    RewriteCond %{QUERY_STRING} (thumbs?\.db|Thumbs\.db) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+    
+    # Block suspicious user agents (but allow images)
+    RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|otf|eot)$ [NC]
+    RewriteCond %{HTTP_USER_AGENT} (eval|base64_decode|gzip|wget|curl|libwww) [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} (libwww-perl|python|nikto|scan|java|winhttp|clshttp|loader) [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} (<|>|'|%0A|%0D|%27|%3C|%3E|%00) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+    
+    # Block suspicious request methods (but allow images)
+    RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|otf|eot)$ [NC]
+    RewriteCond %{REQUEST_METHOD} ^(HEAD|TRACE|DELETE|TRACK|DEBUG) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. SECURITY HEADERS
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Content Security Policy (adjust as needed for your site)
+    # Header always set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ajax.googleapis.com https://www.googletagmanager.com https://cdnjs.cloudflare.com https://d3e54v103j8qbb.cloudfront.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 6. HIDE SERVER SIGNATURE AND VERSION
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+ServerSignature Off
+
+# ------------------------------------------------------------------------------
+# 7. PREVENT ACCESS TO HIDDEN FILES
+# ------------------------------------------------------------------------------
+<FilesMatch "^\.(htaccess|htpasswd|ini|log|sh|sql|conf)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ------------------------------------------------------------------------------
+# 8. MIME TYPE SECURITY
+# ------------------------------------------------------------------------------
+<IfModule mod_mime.c>
+    # Force proper MIME types
+    AddType image/jpeg .jpg .jpeg .JPG .JPEG
+    AddType image/png .png .PNG
+    AddType image/gif .gif .GIF
+    AddType image/svg+xml .svg .SVG
+    AddType image/webp .webp .WEBP
+    AddType image/x-icon .ico .ICO
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType text/html .html .htm
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 9. FILE UPLOAD PROTECTION (if file uploads are not needed)
+# ------------------------------------------------------------------------------
+# Uncomment if you don't need file uploads
+# <FilesMatch "\.(php|phtml|php3|php4|php5|php7|php8|phps|phar)$">
+#     <IfModule mod_authz_core.c>
+#         Require all denied
+#     </IfModule>
+# </FilesMatch>
+
+# ------------------------------------------------------------------------------
+# 10. RATE LIMITING (if mod_evasive or mod_security is available)
+# ------------------------------------------------------------------------------
+# These require additional modules - uncomment if available on your server
+
+# ------------------------------------------------------------------------------
+# ALLOWED FILES - Ensure index.html and images work properly
+# ------------------------------------------------------------------------------
+# Index files are allowed (default behavior)
+DirectoryIndex index.html index.htm
+
+# Explicitly allow image files
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|ico|JPG|JPEG|PNG|GIF|SVG|WEBP|ICO)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
+
+# Explicitly allow HTML files
+<FilesMatch "\.(html|htm)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
+
+# ==============================================================================
+# END OF SECURITY CONFIGURATION
+# ==============================================================================

@@ -1,0 +1,83 @@
+<!-- Footer Component - Reusable across the site -->
+  <div class="container-2 w-container">
+    <div class="footer-flex-container">
+      <a href="index.html" class="footer-logo-link"><img src="images/Y_wht.png" alt="The Yard Cafe Logo" class="footer-image"></a>
+      <div>
+        <ul role="list" class="w-list-unstyled">
+          <li>
+            <a href="index.html" class="footer-link">HOME</a>
+          </li>
+          <li>
+            <a href="menu.html" class="footer-link">MENU</a>
+          </li>
+          <li>
+            <a href="evenings.html" class="footer-link">EVENINGS</a>
+          </li>
+          <li>
+            <a href="catering.html" class="footer-link">CATERING</a>
+          </li>
+          <li>
+            <a href="venue-hire.html" class="footer-link">VENUE HIRE</a>
+          </li>
+          <li>
+            <a href="about.html" class="footer-link">ABOUT</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-link">CONTACT</a>
+          </li>
+          <li>
+            <a href="terms.html" class="footer-link">TERMS & CONDITIONS</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-link">PRIVACY POLICY</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Newsletter Signup Form -->
+    <div class="footer-newsletter">
+      <h4 class="footer-heading">GET OUR NEWSLETTER</h4>
+      
+      <!-- Simple Mailchimp Form -->
+      <div id="newsletter-container" style="max-width: 300px; margin: 0 auto; padding: 20px; border-radius: 8px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+        <div id="newsletter-form-wrapper">
+          <div style="text-align: center; color: #fff; font-size: 12px; margin-bottom: 15px;">
+            <span class="asterisk" style="color: #e25c5c;">*</span> indicates required
+          </div>
+          
+          <div style="margin-bottom: 15px;">
+            <label for="newsletter-email" style="color: #fff; font-weight: 600; font-size: 14px; margin-bottom: 8px; display: block; text-transform: uppercase; letter-spacing: 0.5px;">
+              EMAIL ADDRESS <span class="asterisk" style="color: #e25c5c;">*</span>
+            </label>
+            <input type="email" id="newsletter-email" style="width: 100%; max-width: 260px; padding: 12px 10px; margin: 0 auto; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 6px; font-size: 14px; background: rgba(255, 255, 255, 0.95); color: #000; font-weight: 500; transition: all 0.3s ease; box-sizing: border-box; display: block;" placeholder="YOUR@EMAIL.COM">
+          </div>
+          
+          <div style="text-align: center; margin-top: 10px;">
+            <button id="newsletter-subscribe" style="width: 260px; max-width: 260px; min-height: 40px; padding: 10px 0; font-size: 14px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 6px; background: linear-gradient(135deg, #D2691E, #B8860B); color: white; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(210, 105, 30, 0.3); transition: all 0.3s ease; display: block; margin: 0 auto;">
+              SUBSCRIBE
+            </button>
+          </div>
+        </div>
+        
+        <!-- Success message will appear here -->
+        <div id="newsletter-message" style="display: none; margin-top: 15px; padding: 12px; border-radius: 6px; text-align: center; color: white; background: rgba(76, 175, 80, 0.7);"></div>
+      </div>
+      
+      <!-- Actual hidden Mailchimp form for submission -->
+      <div style="display:none;">
+        <form action="https://theyardcafe.us19.list-manage.com/subscribe/post" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+          <input type="hidden" name="u" value="4a4ad449c066b3955be6fdfad">
+          <input type="hidden" name="id" value="a6c6d556cb">
+          <input type="hidden" name="f_id" value="00c5c2e1f0">
+          <input type="email" name="EMAIL" id="mce-EMAIL">
+          <input type="text" name="b_4a4ad449c066b3955be6fdfad_a6c6d556cb" tabindex="-1" value="" style="position:absolute; left:-5000px;" aria-hidden="true">
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer-info">
+      <div style="font-family: Arial, sans-serif;">Palmers Green Station, Aldermans Hill, London N13 4PN | 020 8886 6884</div>
+      <div style="font-family: Arial, sans-serif;">Copyright <span id="copyright-year"></span> The Yard Cafe. All rights reserved.<br><br>Website designed and maintained by <a href="https://paradigmstudio.net/" target="_blank" rel="noopener" style="color: white; text-decoration: underline;">The Paradigm Studio</a></div>
+    </div>
+  </div>

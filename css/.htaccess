@@ -1,0 +1,34 @@
+# ==============================================================================
+# Enhanced Security .htaccess for css/ Directory
+# ==============================================================================
+
+# Disable directory browsing
+Options -Indexes
+
+# Prevent execution of any scripts
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|php8|phps|phar|js|jsp|asp|aspx|cgi|pl|py|rb|sh|html|htm)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Allow CSS files only
+<FilesMatch "\.(css)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Content-Type "text/css"
+</IfModule>

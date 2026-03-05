@@ -1,0 +1,131 @@
+/* Animated Elements for The Yard Cafe */
+
+/* Fix position:relative on all mainpageheading elements */
+.mainpageheading {
+  position: relative !important; /* Force override any other styles */
+  display: block !important; /* Ensure proper positioning of the underline */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  padding-bottom: 30px !important; /* Add space for the underline */
+  overflow: visible !important; /* Ensure the underline is not cut off */
+}
+
+/* Animated underline for page headings */
+@keyframes underline-animation {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 180px;
+    opacity: 1;
+  }
+}
+
+/* Default state - no animation until animate class is added */
+.mainpageheading::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 0 !important;
+  height: 8px !important;
+  background-color: #D4AF37 !important; /* Gold color for the underline */
+  z-index: 10 !important; /* Ensure it appears above other elements */
+  visibility: visible !important;
+  opacity: 0 !important;
+}
+
+/* Animation triggered by animate class */
+.mainpageheading.animate::after {
+  animation-name: underline-animation !important;
+  animation-duration: 1.2s !important;
+  animation-timing-function: ease !important;
+  animation-fill-mode: forwards !important;
+  animation-delay: 0.5s !important;
+}
+
+/* Add animation to menuheading class as well for consistency */
+.menuheading, .menuheading-small {
+  position: relative !important;
+  display: inline-block !important;
+  margin-bottom: 20px !important;
+  overflow: visible !important;
+}
+
+/* Default state - no animation until animate class is added */
+.menuheading::after,
+.menuheading-small::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -10px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 4px !important;
+  background-color: #D4AF37 !important; /* Gold color for the underline */
+  z-index: 10 !important; /* Ensure it appears above other elements */
+  visibility: visible !important;
+  opacity: 0 !important;
+}
+
+/* Animation triggered by animate class */
+.menuheading.animate::after,
+.menuheading-small.animate::after {
+  animation-name: underline-animation !important;
+  animation-duration: 1.2s !important;
+  animation-timing-function: ease !important;
+  animation-fill-mode: forwards !important;
+  animation-delay: 0.5s !important;
+}
+
+/* Responsive adjustments for tablets */
+@media screen and (max-width: 767px) {
+  .mainpageheading::after {
+    height: 6px !important;
+    bottom: 12px !important;
+  }
+  
+  .menuheading::after,
+  .menuheading-small::after {
+    height: 3px !important;
+    bottom: -8px !important;
+  }
+  
+  /* Override animation width for tablets */
+  @keyframes underline-animation {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 140px;
+      opacity: 1;
+    }
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 479px) {
+  .mainpageheading::after {
+    height: 5px !important;
+    bottom: 8px !important;
+  }
+  
+  /* Override animation width for mobile */
+  @keyframes underline-animation {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 100px;
+      opacity: 1;
+    }
+  }
+}
+  /* Make sure there's space for the underline on smaller screens */
+  .mainpageheading {
+    padding-bottom: 25px !important;
+  }

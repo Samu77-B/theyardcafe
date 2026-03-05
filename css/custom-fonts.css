@@ -1,0 +1,27 @@
+/* Custom font overrides */
+.paragraph-2 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000 !important;
+}
+
+/* Additional overrides for any nested elements that might inherit other fonts */
+.paragraph-2 * {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+/* Ensure font is applied on all pages */
+.w-container .paragraph-2 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+/* Target specific containers where paragraph-2 is used */
+.section-3 .paragraph-2,
+.container-4 .paragraph-2 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300 !important;
+}

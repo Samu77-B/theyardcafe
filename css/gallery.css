@@ -1,0 +1,219 @@
+/* Gallery Styles for The Yard Cafe */
+
+/* Back Arrow Navigation */
+.back-arrow {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-arrow:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+}
+
+.back-arrow i {
+  font-size: 24px;
+  color: #333;
+}
+
+.gallery-heading {
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.gallery-description {
+  margin-bottom: 30px;
+}
+
+/* Standardized Gallery Grid - All pages now use consistent styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 600px; /* Consistent height for all gallery items */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block; /* Removes any space below image */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Two column layout for smaller galleries - same styling as gallery-grid */
+.gallery-grid-small {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Ensure gallery-grid-small images behave exactly the same as gallery-grid images */
+.gallery-grid-small .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 600px; /* Same height as gallery-grid */
+}
+
+.gallery-grid-small .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.gallery-grid-small .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Team Gallery Styles */
+.team-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.team-card {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Use padding-bottom technique for perfect square aspect ratio */
+.team-card-inner {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* Creates a perfect square */
+}
+
+.team-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover; /* Maintains aspect ratio while filling the container */
+  display: block; /* Removes any space below image */
+}
+
+/* Desktop and Tablet heights - Standardized for all gallery types */
+@media screen and (min-width: 768px) {
+  .gallery-item {
+    height: 400px; /* Consistent height for desktop and tablet */
+  }
+  
+  .gallery-grid-small .gallery-item {
+    height: 400px; /* Same height as gallery-grid */
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 991px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+  
+  .gallery-grid-small {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+  
+  .team-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-grid, .gallery-grid-small {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .gallery-item {
+    height: 600px; /* Consistent height for mobile */
+    margin: 0; /* Remove margin that might cause layout issues */
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 550px; /* Ensure minimum height */
+    display: flex; /* Improve image centering */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gallery-grid-small .gallery-item {
+    height: 600px; /* Same height as gallery-grid on mobile */
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    will-change: transform; /* Performance optimization */
+  }
+  
+  .gallery-grid-small .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    will-change: transform;
+  }
+  
+  .team-gallery {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .menu-image-gallery {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}

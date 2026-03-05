@@ -1,0 +1,278 @@
+/* Mobile Menu Styles */
+/* Mobile menu now works at all screen sizes */
+
+/* Ensure mobile menu is above everything else */
+body {
+  /* Create a new stacking context for the whole page */
+  position: relative;
+  z-index: 1;
+}
+
+/* Default state - menu is hidden */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.97), rgba(0, 0, 0, 0.90));
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: center;
+  z-index: 99999; /* Extremely high z-index */
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  margin: 0;
+  box-shadow: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateZ(0); /* Force hardware acceleration */
+  will-change: opacity, visibility; /* Hint to browser for optimization */
+}
+  
+/* When show class is applied, show the menu */
+.nav-menu.show {
+  height: 100vh;
+  opacity: 1;
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+  visibility: visible;
+}
+  
+/* Container for navigation links */
+.nav-menu > div {
+  width: 80%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+  
+/* Style the navigation links in mobile view */
+.nav-link-2,
+.nav-link-3,
+.nav-link-4 {
+  display: block;
+  padding: 15px 0;
+  color: white !important;
+  text-align: center;
+  margin: 12px auto;
+  font-size: 26px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 80%;
+  max-width: 200px;
+}
+  
+/* Gold accent line styling */
+.nav-link-2:before,
+.nav-link-3:before,
+.nav-link-4:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #c8a27e;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+  
+/* Hover effect for links - expand line */
+.nav-link-2:hover:before,
+.nav-link-3:hover:before,
+.nav-link-4:hover:before {
+  width: 40px;
+}
+
+/* Hover effect for links */
+.nav-link-2:hover,
+.nav-link-3:hover,
+.nav-link-4:hover {
+  color: #c8a27e !important;
+  transform: translateY(-3px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the active link */
+.w--current {
+  color: #c8a27e !important;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Active link gets permanent line */
+.w--current:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: #c8a27e;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Add animation for menu items */
+.nav-menu.show .nav-link-2 {
+  animation: fadeInUp 0.5s ease forwards 0.1s;
+}
+
+.nav-menu.show .nav-link-3 {
+  animation: fadeInUp 0.5s ease forwards 0.2s;
+}
+
+.nav-menu.show .nav-link-4 {
+  animation: fadeInUp 0.5s ease forwards 0.3s;
+}
+
+.nav-menu.show .nav-link-5,
+.nav-menu.show .nav-link-6 {
+  animation: fadeInUp 0.5s 0.4s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+  /* Style the mobile nav trigger button - hamburger icon */
+.mobile-nav-trigger {
+  cursor: pointer;
+  z-index: 2001;
+  display: block !important;
+  background-color: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  outline: none !important;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  overflow: visible;
+  transform: rotate(0deg);
+  padding: 0;
+  }
+
+  /* Custom hamburger icon with spans instead of unicode character */
+.mobile-nav-trigger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 0;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  }
+
+/* Position the three lines */
+.mobile-nav-trigger span:nth-child(1) {
+  top: 10px;
+  }
+
+.mobile-nav-trigger span:nth-child(2) {
+  top: 20px;
+}
+
+.mobile-nav-trigger span:nth-child(3) {
+  top: 30px;
+}
+
+  /* Hover effect */
+.mobile-nav-trigger:hover span {
+    background: #c8a27e;
+  }
+  
+  /* Animation for the menu button when active - transform to X */
+.mobile-nav-trigger.w--open span:nth-child(1) {
+  top: 20px;
+  transform: rotate(135deg);
+  background: #c8a27e;
+  }
+
+.mobile-nav-trigger.w--open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+  }
+
+.mobile-nav-trigger.w--open span:nth-child(3) {
+  top: 20px;
+  transform: rotate(-135deg);
+  background: #c8a27e;
+  }
+
+/* When menu opens, prevent body scrolling */
+body.nav-open {
+  overflow: hidden;
+}
+
+/* Make mobile menu trigger always visible regardless of screen size */
+.mobile-nav-trigger {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Tablet-specific enhancements */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Adjusted sizing for tablet screens */
+  .nav-menu {
+    padding-top: 80px;
+  }
+  
+  .nav-menu > div {
+  width: 90%;
+    max-width: 500px;
+  }
+  
+  .nav-link-2,
+  .nav-link-3,
+  .nav-link-4 {
+    font-size: 32px;
+    padding: 18px 0;
+  margin: 15px auto;
+  }
+  
+  /* Slightly larger hamburger button for tablets */
+  .mobile-nav-trigger {
+  width: 45px;
+  height: 45px;
+    top: 25px;
+    right: 25px;
+  }
+  
+  .mobile-nav-trigger span:nth-child(1) {
+    top: 12px;
+  }
+  
+  .mobile-nav-trigger span:nth-child(2) {
+    top: 22px;
+  }
+  
+  .mobile-nav-trigger span:nth-child(3) {
+    top: 32px;
+  }
+}

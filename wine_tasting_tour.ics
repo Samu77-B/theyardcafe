@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:A Wine Tasting Tour De France - SOLD OUT
+LOCATION:The Yard Cafe, Palmers Green Station, Aldermans Hill, London N13 4PN
+DTSTART:20251107T190000Z
+DTEND:20251107T210000Z
+DESCRIPTION:A Wine Tasting Tour De France at The Yard Cafe - SOLD OUT. This event is now fully booked.
+STATUS:CANCELLED
+END:VEVENT
+END:VCALENDAR

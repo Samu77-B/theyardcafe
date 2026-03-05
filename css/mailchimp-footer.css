@@ -1,0 +1,155 @@
+/* Mailchimp Footer Form Styling */
+.footer-newsletter {
+  margin: 20px auto;
+  max-width: 380px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-family: 'Dahot', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Screen reader only class - visually hidden but accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.footer-label {
+  display: block;
+  color: #dddddd;
+  margin-bottom: 8px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+}
+
+/* Container for input + button horizontal layout */
+.input-button-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 380px;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.footer-input {
+  flex: 1;
+  border: none;
+  padding: 10px 15px;
+  height: 44px;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+}
+
+.footer-input:focus {
+  outline: none;
+  border-color: rgba(224, 93, 68, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-button {
+  border: none;
+  padding: 10px 20px;
+  height: 44px;
+  background-color: #D55C3A;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  font-family: 'Dahot', sans-serif;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+}
+
+.footer-button:hover {
+  background-color: #d14a31;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.footer-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-info {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* Thank you message styling */
+.signup-thank-you {
+  color: #ffffff;
+  background-color: rgba(76, 175, 80, 0.2);
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  border-left: 3px solid #4CAF50;
+  display: none;
+}
+
+/* Remove margin-bottom from MC field group */
+.mc-field-group {
+  margin-bottom: 0;
+}
+
+/* Remove default margins from clear div */
+.clear {
+  margin: 0;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 767px) {
+  .footer-newsletter {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .input-button-group {
+    flex-direction: column;
+  }
+  
+  .footer-input {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-button {
+    width: 100%;
+    border-radius: 4px;
+  }
+}

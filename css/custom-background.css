@@ -1,0 +1,21 @@
+/* Custom background color for The Yard Cafe */
+html, body {
+  background-color: #c1b69a !important;
+}
+
+.section-3 {
+  background-color: #c1b69a !important;
+}
+
+.container, .container-3, .container-4, .container-5 {
+  background-color: #fdfdfd00 !important;
+}
+
+.container-2 {
+  background-color: transparent !important;
+}
+
+/* Override any section backgrounds that don't have images */
+.wf-section:not(.section-2):not(.section):not(.footer) {
+  background-color: #c1b69a !important;
+}
