@@ -163,6 +163,38 @@ const hardcodedEvents = [
     link: 'evenings.html#march-wine-tasting-bordeaux-burgundy',
     icon: 'events/WineTasting.png',
     soldOut: false
+  },
+  {
+    id: 'april-11-live-music',
+    date: '2026-04-11',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#april-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'april-18-live-music',
+    date: '2026-04-18',
+    title: 'Live Music - Tom Benson',
+    link: 'evenings.html#april-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'april-24-italian-wine-tasting',
+    date: '2026-04-24',
+    title: 'Italian Wine Tasting',
+    link: 'evenings.html#april-italian-wine-tasting',
+    icon: 'events/WineTasting.png',
+    soldOut: false
+  },
+  {
+    id: 'april-25-live-music',
+    date: '2026-04-25',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#april-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
   }
   // Add new events above this line
   // Past events are automatically filtered out, so you can leave them here
