@@ -186,7 +186,7 @@ const hardcodedEvents = [
     title: 'Italian Wine Tasting',
     link: 'evenings.html#april-italian-wine-tasting',
     icon: 'events/WineTasting.png',
-    soldOut: false
+    soldOut: true
   },
   {
     id: 'april-25-live-music',
