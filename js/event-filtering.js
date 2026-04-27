@@ -195,6 +195,54 @@ const hardcodedEvents = [
     link: 'evenings.html#april-live-music',
     icon: 'events/LiveMusic.png',
     soldOut: false
+  },
+  {
+    id: 'may-2-live-music',
+    date: '2026-05-02',
+    title: 'Live Music - Sarah Cablis',
+    link: 'evenings.html#may-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'may-9-live-music',
+    date: '2026-05-09',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#may-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'may-16-live-music',
+    date: '2026-05-16',
+    title: 'Live Music - Tom Benson',
+    link: 'evenings.html#may-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'may-22-wine-tasting-unusual',
+    date: '2026-05-22',
+    title: 'Wine Tasting - Unusual Wine Countries',
+    link: 'evenings.html#may-wine-tasting-unusual-countries',
+    icon: 'events/WineTasting.png',
+    soldOut: false
+  },
+  {
+    id: 'may-23-live-music',
+    date: '2026-05-23',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#may-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'june-26-sparkling-champagne',
+    date: '2026-06-26',
+    title: 'Sparkling and Champagne Tasting',
+    link: 'evenings.html#june-sparkling-champagne-tasting',
+    icon: 'events/WineTasting.png',
+    soldOut: false
   }
   // Add new events above this line
   // Past events are automatically filtered out, so you can leave them here
