@@ -237,11 +237,43 @@ const hardcodedEvents = [
     soldOut: false
   },
   {
+    id: 'june-6-live-music',
+    date: '2026-06-06',
+    title: 'Live Music - Tom Benson',
+    link: 'evenings.html#june-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'june-13-live-music',
+    date: '2026-06-13',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#june-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'june-20-live-music',
+    date: '2026-06-20',
+    title: 'Live Music - Tom Benson',
+    link: 'evenings.html#june-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
     id: 'june-26-sparkling-champagne',
     date: '2026-06-26',
     title: 'Sparkling and Champagne Tasting',
     link: 'evenings.html#june-sparkling-champagne-tasting',
     icon: 'events/WineTasting.png',
+    soldOut: false
+  },
+  {
+    id: 'june-27-live-music',
+    date: '2026-06-27',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#june-live-music',
+    icon: 'events/LiveMusic.png',
     soldOut: false
   }
   // Add new events above this line
