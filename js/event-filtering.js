@@ -307,6 +307,30 @@ const hardcodedEvents = [
     link: 'evenings.html#july-live-music',
     icon: 'events/LiveMusic.png',
     soldOut: false
+  },
+  {
+    id: 'august-1-live-music',
+    date: '2026-08-01',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#august-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'august-8-live-music',
+    date: '2026-08-08',
+    title: 'Live Music - Jessie Pie',
+    link: 'evenings.html#august-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'august-15-live-music',
+    date: '2026-08-15',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#august-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
   }
   // Add new events above this line
   // Past events are automatically filtered out, so you can leave them here
