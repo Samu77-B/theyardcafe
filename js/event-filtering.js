@@ -301,6 +301,14 @@ const hardcodedEvents = [
     soldOut: false
   },
   {
+    id: 'july-17-wine-tasting',
+    date: '2026-07-17',
+    title: 'Around the World Wine Tasting',
+    link: 'evenings.html#july-around-the-world-wine-tasting',
+    icon: 'events/WineTasting.png',
+    soldOut: false
+  },
+  {
     id: 'july-25-live-music',
     date: '2026-07-25',
     title: 'Live Music - Tom Benson',
