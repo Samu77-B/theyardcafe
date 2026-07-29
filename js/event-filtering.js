@@ -339,6 +339,22 @@ const hardcodedEvents = [
     link: 'evenings.html#august-live-music',
     icon: 'events/LiveMusic.png',
     soldOut: false
+  },
+  {
+    id: 'september-25-tour-de-france-wine-tasting',
+    date: '2026-09-25',
+    title: 'Tour de France Wine Tasting',
+    link: 'evenings.html#september-tour-de-france-wine-tasting',
+    icon: 'events/WineTasting.png',
+    soldOut: false
+  },
+  {
+    id: 'october-23-tour-d-italia-wine-tasting',
+    date: '2026-10-23',
+    title: "Tour d'Italia Wine Tasting",
+    link: 'evenings.html#october-tour-d-italia-wine-tasting',
+    icon: 'events/WineTasting.png',
+    soldOut: false
   }
   // Add new events above this line
   // Past events are automatically filtered out, so you can leave them here
