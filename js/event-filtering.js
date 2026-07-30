@@ -341,6 +341,38 @@ const hardcodedEvents = [
     soldOut: false
   },
   {
+    id: 'september-5-live-music',
+    date: '2026-09-05',
+    title: 'Live Music - Jessie Pie',
+    link: 'evenings.html#september-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'september-12-live-music',
+    date: '2026-09-12',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#september-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'september-19-live-music',
+    date: '2026-09-19',
+    title: 'Live Music - Tom Benson',
+    link: 'evenings.html#september-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
+    id: 'september-26-live-music',
+    date: '2026-09-26',
+    title: 'Live Music - Maurice Judge',
+    link: 'evenings.html#september-live-music',
+    icon: 'events/LiveMusic.png',
+    soldOut: false
+  },
+  {
     id: 'september-25-tour-de-france-wine-tasting',
     date: '2026-09-25',
     title: 'Tour de France Wine Tasting',
