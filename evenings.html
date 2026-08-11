@@ -742,166 +742,58 @@
       <!-- Make sure we load Bebas Neue font -->  
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
       <script>
-        // This script applies the Bebas Neue font to Cognito Forms
+        // Cognito form branding — CSS only.
+        // Do NOT walk the DOM or touch iframes: Stripe payment fields live in
+        // iframes and break when parent scripts force fonts / restyle on every mutation.
         (function() {
-          // First, add global stylesheet to head immediately
           var globalStyles = document.createElement('style');
           globalStyles.innerHTML = `
-            /* Global styles for all Cognito forms */
-            .cognito * { font-family: 'Bebas Neue', sans-serif !important; }
-            .cog-cognito * { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            /* Force any iframes containing Cognito Forms to inherit fonts */
-            iframe[src*='cognitoforms.com'] { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            /* Add gray background to match site styling */
-            #c-forms-container, #c-forms-form-container, 
-            .cognito, .cog-cognito, 
-            .c-forms-form, .cog-form, 
-            #c-forms-form-59 {
+            #c-forms-container, #c-forms-form-container,
+            .cognito, .cog-cognito,
+            .c-forms-form, .cog-form,
+            [id^="c-forms-form-"] {
               background-color: #f2f2f2 !important;
               padding: 15px !important;
               border-radius: 5px !important;
             }
-            
-            /* Target form IDs directly - we know the ID on this page is 59 */
-            #c-forms-form-59 * { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            
-            /* Target the new November event form (ID 73) */
-            #c-forms-form-73 * { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            /* Target the new Champagne Tasting event form (ID 74) */
-            #c-forms-form-74 * { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            /* Target the new Christmas Supper Club event form (ID 75) */
-            #c-forms-form-75 * { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            /* Target the Wine Tasting 'Tour de France' event form (ID 79) */
-            #c-forms-form-79 * { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            /* Target the Bordeaux vs Burgundy Wine Tasting event form (ID 80) */
-            #c-forms-form-80 * { font-family: 'Bebas Neue', sans-serif !important; }
 
-            /* Target the Italian Wine Tasting event form (ID 82) */
-            #c-forms-form-82 * { font-family: 'Bebas Neue', sans-serif !important; }
-            /* May / June 2026 events — add matching rules when Cognito form IDs are set */
-            /* #c-forms-form-83 * { font-family: 'Bebas Neue', sans-serif !important; } */
-            /* #c-forms-form-84 * { font-family: 'Bebas Neue', sans-serif !important; } */
-            #c-forms-form-85 * { font-family: 'Bebas Neue', sans-serif !important; }
-            #c-forms-form-86 * { font-family: 'Bebas Neue', sans-serif !important; }
-            #c-forms-form-88 * { font-family: 'Bebas Neue', sans-serif !important; }
-            
-            /* CSS Variables approach as recommended by Cognito */
+            /* Brand display text only — never force fonts onto inputs or payment iframes */
+            .cognito .cog-header,
+            .cognito .cog-label,
+            .cognito .cog-page__navigation,
+            .cognito .cog-button,
+            .cognito h1, .cognito h2, .cognito h3, .cognito h4,
+            .cog-cognito .cog-header,
+            .cog-cognito .cog-label,
+            .cog-cognito .cog-button,
+            [id^="c-forms-form-"] .cog-header,
+            [id^="c-forms-form-"] .cog-label,
+            [id^="c-forms-form-"] .cog-button {
+              font-family: 'Bebas Neue', sans-serif !important;
+            }
+
+            /* Leave Stripe / card entry alone (system fonts required) */
+            .cognito iframe,
+            .cog-cognito iframe,
+            [id^="c-forms-form-"] iframe,
+            .cognito .StripeElement,
+            .cognito [class*="Stripe"],
+            .cognito input,
+            .cognito select,
+            .cognito textarea {
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+            }
+
             :root .cog-cognito {
-              --font-family: 'Bebas Neue', sans-serif !important;
-              --input__font-family: 'Bebas Neue', sans-serif !important;
-              --button__font-family: 'Bebas Neue', sans-serif !important;
-              --label__font-family: 'Bebas Neue', sans-serif !important;
-              --heading__font-family: 'Bebas Neue', sans-serif !important;
-              --field-message__font-family: 'Bebas Neue', sans-serif !important;
+              --font-family: 'Bebas Neue', sans-serif;
+              --label__font-family: 'Bebas Neue', sans-serif;
+              --heading__font-family: 'Bebas Neue', sans-serif;
+              --button__font-family: 'Bebas Neue', sans-serif;
+              --input__font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+              --field-message__font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             }
           `;
           document.head.appendChild(globalStyles);
-          
-          // Helper function to apply styles to a specific element
-          function applyStylesToElement(element) {
-            if (!element) return;
-            
-            // Apply inline styles to all children recursively
-            function styleAllChildren(parent) {
-              if (!parent) return;
-              
-              // Style the parent
-              parent.style.fontFamily = "'Bebas Neue', sans-serif";
-              
-              // Style all children
-              for (var i = 0; i < parent.children.length; i++) {
-                var child = parent.children[i];
-                child.style.fontFamily = "'Bebas Neue', sans-serif";
-                styleAllChildren(child);
-              }
-            }
-            
-            // Start the recursion
-            styleAllChildren(element);
-          }
-          
-          // Function to try to style the form in an iframe
-          function tryToStyleIframe(iframe) {
-            try {
-              // Get iframe document
-              var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-              
-              // Add stylesheet to iframe
-              var style = document.createElement('style');
-              style.textContent = "* { font-family: 'Bebas Neue', sans-serif !important; }";
-              iframeDoc.head.appendChild(style);
-              
-              // Add font link
-              var fontLink = document.createElement('link');
-              fontLink.href = 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap';
-              fontLink.rel = 'stylesheet';
-              iframeDoc.head.appendChild(fontLink);
-              
-              // Apply inline styles to all elements
-              applyStylesToElement(iframeDoc.body);
-              
-            } catch(e) {
-              // Cross-origin restrictions may prevent this
-              console.log('Could not access iframe contents due to security restrictions');
-            }
-          }
-          
-          // Function to style forms once they appear
-          function styleFormsAndIframes() {
-            // Target the forms directly
-            var cognitoForms = document.querySelectorAll('[id^="c-forms-form-"]');
-            cognitoForms.forEach(applyStylesToElement);
-            
-            // Target any Cognito iframes
-            var cognitoIframes = document.querySelectorAll('iframe[src*="cognitoforms.com"]');
-            cognitoIframes.forEach(tryToStyleIframe);
-          }
-          
-          // Setup a mutation observer to watch for the form being added to the DOM
-          var observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-              // Check if any new nodes were added
-              if (mutation.addedNodes && mutation.addedNodes.length > 0) {
-                // Check for forms or iframes
-                for (var i = 0; i < mutation.addedNodes.length; i++) {
-                  var node = mutation.addedNodes[i];
-                  if (node.id && node.id.indexOf('c-forms-form') !== -1) {
-                    applyStylesToElement(node);
-                  }
-                  if (node.tagName === 'IFRAME' && node.src && node.src.indexOf('cognitoforms.com') !== -1) {
-                    tryToStyleIframe(node);
-                  }
-                }
-              }
-            });
-            
-            // Also try to style all forms and iframes
-            styleFormsAndIframes();
-          });
-          
-          // Watch the entire document for changes
-          observer.observe(document.documentElement, {
-            childList: true,
-            subtree: true
-          });
-          
-          // Try immediately
-          styleFormsAndIframes();
-          
-          // Also try after page is fully loaded
-          window.addEventListener('load', styleFormsAndIframes);
-          
-          // And try again after a delay to catch late-loading forms
-          setTimeout(styleFormsAndIframes, 1000);
-          setTimeout(styleFormsAndIframes, 2000);
-          setTimeout(styleFormsAndIframes, 5000);
         })();
       </script>
       
@@ -1284,8 +1176,8 @@
               <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
               <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£55 PER PERSON</p>
             </div>
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <script src="https://www.cognitoforms.com/f/seamless.js" data-key="nra8M7-W5EyCgKiqoaohEw" data-form="79"></script>
+            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
+              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
             </div>
             <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
               <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
@@ -1562,8 +1454,8 @@
               <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£60 PER PERSON</p>
             </div>
 
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <script src="https://www.cognitoforms.com/f/seamless.js" data-key="nra8M7-W5EyCgKiqoaohEw" data-form="82"></script>
+            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
+              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
             </div>
 
             <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
@@ -1658,8 +1550,8 @@
               <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£80 PER PERSON</p>
             </div>
 
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <script src="https://www.cognitoforms.com/f/seamless.js" data-key="nra8M7-W5EyCgKiqoaohEw" data-form="85"></script>
+            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
+              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
             </div>
 
             <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
@@ -1732,7 +1624,7 @@
         </div>
       </div>
 
-      <!-- July 17 2026 — Around the World Wine Tasting (Cognito form 86) -->
+      <!-- July 17 2026 — Around the World Wine Tasting (Cognito form TBC — was wrongly using form 86 / Tour d'Italia) -->
       <div id="july-around-the-world-wine-tasting" data-event-end="2026-07-17T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
         <div style="text-align: center; margin-bottom: 20px;">
           <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">AROUND THE WORLD WINE TASTING</h2>
@@ -1754,9 +1646,9 @@
               <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£60 PER PERSON</p>
             </div>
 
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <iframe src="https://www.cognitoforms.com/f/nra8M7-W5EyCgKiqoaohEw/86" allow="payment" style="border:0;width:100%;" height="826"></iframe>
-              <script src="https://www.cognitoforms.com/f/iframe.js"></script>
+            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
+              <p style="margin-bottom: 10px;">Online booking form coming soon.</p>
+              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
             </div>
 
             <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
@@ -1906,7 +1798,9 @@
             </div>
 
             <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <script src="https://www.cognitoforms.com/f/seamless.js" data-key="nra8M7-W5EyCgKiqoaohEw" data-form="88"></script>
+              <!-- iframe + allow="payment" required for Stripe card / wallet fields -->
+              <iframe src="https://www.cognitoforms.com/f/nra8M7-W5EyCgKiqoaohEw/88" allow="payment" style="border:0;width:100%;" height="845"></iframe>
+              <script src="https://www.cognitoforms.com/f/iframe.js"></script>
             </div>
 
             <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
@@ -1941,7 +1835,9 @@
             </div>
 
             <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <script src="https://www.cognitoforms.com/f/seamless.js" data-key="nra8M7-W5EyCgKiqoaohEw" data-form="86"></script>
+              <!-- iframe + allow="payment" required for Stripe card / wallet fields -->
+              <iframe src="https://www.cognitoforms.com/f/nra8M7-W5EyCgKiqoaohEw/86" allow="payment" style="border:0;width:100%;" height="845"></iframe>
+              <script src="https://www.cognitoforms.com/f/iframe.js"></script>
             </div>
 
             <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
