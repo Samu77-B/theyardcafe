@@ -378,7 +378,7 @@ const hardcodedEvents = [
     title: 'Tour de France Wine Tasting',
     link: 'evenings.html#september-tour-de-france-wine-tasting',
     icon: 'events/WineTasting.png',
-    soldOut: false
+    soldOut: true
   },
   {
     id: 'october-23-tour-d-italia-wine-tasting',
