@@ -62,7 +62,7 @@
   <link href="css/mailchimp-footer.css" rel="stylesheet" type="text/css">
   <link href="css/mobile-menu.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["Bebas Neue:regular"]  }});</script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Bebas Neue:regular", "Source Sans Pro:300,400,600,700"]  }});</script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <!-- Enhanced Structured Data for AI Search Engines - Events -->
@@ -594,15 +594,15 @@
     <div class="container-4 w-container">
       <div class="evenings-quick-nav">
         <div class="evenings-quick-nav__container">
-          <a href="#christmas-supper-club" class="outlinebutton w-button evenings-quick-nav__button">
+          <a href="#upcoming-events" class="outlinebutton w-button evenings-quick-nav__button">
             <img src="events/Supper-club.png" alt="Supper Club Icon" class="evenings-quick-nav__icon">
             <span class="evenings-quick-nav__label">The Supper Club</span>
           </a>
-          <a href="#september-live-music" class="outlinebutton w-button evenings-quick-nav__button">
+          <a href="#live-music" class="outlinebutton w-button evenings-quick-nav__button">
             <img src="events/LiveMusic.png" alt="Live Music Icon" class="evenings-quick-nav__icon">
             <span class="evenings-quick-nav__label">Music</span>
           </a>
-          <a href="#september-tour-de-france-wine-tasting" class="outlinebutton w-button evenings-quick-nav__button">
+          <a href="#upcoming-events" class="outlinebutton w-button evenings-quick-nav__button">
             <img src="events/WineTasting.png" alt="Wine Tasting Icon" class="evenings-quick-nav__icon">
             <span class="evenings-quick-nav__label">Wine Tasting</span>
           </a>
@@ -738,982 +738,20 @@
       <!-- Instagram Platform Script -->
       <script async src="https://www.instagram.com/embed.js"></script>
 
-      <h1 class="menuheading" style="margin-top: 40px;">UPCOMING EVENTS</h1>
-      <!-- Make sure we load Bebas Neue font -->  
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-      <script>
-        // Cognito form branding — CSS only.
-        // Do NOT walk the DOM or touch iframes: Stripe payment fields live in
-        // iframes and break when parent scripts force fonts / restyle on every mutation.
-        (function() {
-          var globalStyles = document.createElement('style');
-          globalStyles.innerHTML = `
-            #c-forms-container, #c-forms-form-container,
-            .cognito, .cog-cognito,
-            .c-forms-form, .cog-form,
-            [id^="c-forms-form-"] {
-              background-color: #f2f2f2 !important;
-              padding: 15px !important;
-              border-radius: 5px !important;
-            }
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-            /* Brand display text only — never force fonts onto inputs or payment iframes */
-            .cognito .cog-header,
-            .cognito .cog-label,
-            .cognito .cog-page__navigation,
-            .cognito .cog-button,
-            .cognito h1, .cognito h2, .cognito h3, .cognito h4,
-            .cog-cognito .cog-header,
-            .cog-cognito .cog-label,
-            .cog-cognito .cog-button,
-            [id^="c-forms-form-"] .cog-header,
-            [id^="c-forms-form-"] .cog-label,
-            [id^="c-forms-form-"] .cog-button {
-              font-family: 'Bebas Neue', sans-serif !important;
-            }
-
-            /* Leave Stripe / card entry alone (system fonts required) */
-            .cognito iframe,
-            .cog-cognito iframe,
-            [id^="c-forms-form-"] iframe,
-            .cognito .StripeElement,
-            .cognito [class*="Stripe"],
-            .cognito input,
-            .cognito select,
-            .cognito textarea {
-              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-            }
-
-            :root .cog-cognito {
-              --font-family: 'Bebas Neue', sans-serif;
-              --label__font-family: 'Bebas Neue', sans-serif;
-              --heading__font-family: 'Bebas Neue', sans-serif;
-              --button__font-family: 'Bebas Neue', sans-serif;
-              --input__font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-              --field-message__font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            }
-          `;
-          document.head.appendChild(globalStyles);
-        })();
-      </script>
-      
-
-      
-
-
-
-      <!-- November 2025 Events Section - French Wine Tasting -->
-      <div id="november-wine-tasting" data-event-end="2025-11-07T22:00:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">NOVEMBER 2025 EVENTS</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Special events coming to The Yard Café</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/Nov25/French Wine Tasting 7 Nov 25.JPG" alt="French Wine Tasting - November 2025 at The Yard Café" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">FRENCH WINE TASTING</h3>
-            <p style="text-align: center;">Join us for an exclusive French wine tasting experience featuring carefully selected wines from the finest regions of France.</p>
-          </div>
-          
-          <!-- Right column - Event details and booking form -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 7th November 2025</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 24px; margin-bottom: 15px; color: #d32f2f; font-weight: bold;"><strong>SOLD OUT</strong></p>
-            </div>
-            
-            <!-- November Event Booking Form - SOLD OUT -->
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 15px; color: #d32f2f; text-align: center; font-size: 24px;">EVENT SOLD OUT</h3>
-              <div style="text-align: center; padding: 20px; background-color: #f2f2f2; border-radius: 5px;">
-                <p style="font-size: 16px; margin: 0; font-weight: bold;">This event is now fully booked. Thank you for your interest!</p>
-              </div>
-            </div>
-          </div>
+      <!-- Ticketed / wine / supper events: auto-updated from UrNextEvent -->
+      <div id="upcoming-events" style="margin: 40px 0 30px;">
+        <div
+          data-une-organiser="the-yard"
+          data-une-heading="Upcoming events"
+          data-une-layout="split"
+          style="width:100%;max-width:100%;">
         </div>
       </div>
 
-      <!-- November 2025 Live Music Section -->
-      <div id="november-live-music" data-event-end="2025-11-29T22:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR NOVEMBER</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station - From 7:30pm onwards</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/Nov25/November Music.JPG" alt="Live Music at The Yard - November 2025" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">NOVEMBER LIVE MUSIC</h3>
-            <p style="text-align: center;">Join us for live music performances every Saturday night featuring talented local artists. Free entry, no booking required.</p>
-          </div>
-          
-          <!-- Right column - Event details -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2025-11-01" style="margin-bottom: 15px;">
-                  <strong>Saturday 1st November - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2025-11-01T19:30:00', '2025-11-01T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2025-11-08" style="margin-bottom: 15px;">
-                  <strong>Saturday 8th November - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2025-11-08T19:30:00', '2025-11-08T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2025-11-15" style="margin-bottom: 15px;">
-                  <strong>Saturday 15th November - Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music performance by Tom Benson at The Yard Café, Palmers Green', '2025-11-15T19:30:00', '2025-11-15T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2025-11-22" style="margin-bottom: 15px;">
-                  <strong>Saturday 22nd November - Private Event</strong>
-                </li>
-                <li data-event-date="2025-11-29" style="margin-bottom: 15px;">
-                  <strong>Saturday 29th November - Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music performance by Tom Benson at The Yard Café, Palmers Green', '2025-11-29T19:30:00', '2025-11-29T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Champagne Tasting November 21st 2025 Event Section -->
-      <div id="champagne-tasting-november" data-event-end="2025-11-21T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">CHAMPAGNE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 21st November 2025 - 7:00pm</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/Nov25/champagne-tasting 21 nov 2025.JPG" alt="Champagne Tasting - November 21st 2025 at The Yard Café" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">CHAMPAGNE TASTING WITH MELCHIOR DE SEZE</h3>
-            <p style="text-align: center;">A curated tasting of the different styles and regions of Champagne with Melchior de Seze. 7 Champagnes perfectly paired with oysters, small plates and canapés to complement each pour.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£100 PER PERSON</p>
-          </div>
-          
-          <!-- Right column - Event details and booking form -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 21st November 2025</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 24px; margin-bottom: 15px; color: #d32f2f; font-weight: bold;"><strong>SOLD OUT</strong></p>
-            </div>
-            
-            <!-- Champagne Tasting Event Booking Form - SOLD OUT -->
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 15px; color: #d32f2f; text-align: center; font-size: 24px;">EVENT SOLD OUT</h3>
-              <div style="text-align: center; padding: 20px; background-color: #f2f2f2; border-radius: 5px;">
-                <p style="font-size: 16px; margin: 0; font-weight: bold;">This event is now fully booked. Thank you for your interest!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- December 2025 Live Music Section -->
-      <div id="december-live-music" data-event-end="2025-12-20T22:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR DECEMBER</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station - From 7:30pm onwards</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/December 2025/December Music.JPG" alt="Live Music at The Yard - December 2025" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">DECEMBER LIVE MUSIC</h3>
-            <p style="text-align: center;">Join us for live music performances every Saturday night featuring talented local artists. Free entry, no booking required.</p>
-          </div>
-          
-          <!-- Right column - Event details -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2025-12-06" style="margin-bottom: 15px;">
-                  <strong>Saturday 6th December - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2025-12-06T19:30:00', '2025-12-06T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2025-12-13" style="margin-bottom: 15px;">
-                  <strong>Saturday 13th December - Xmas Carols</strong>
-                  <br>
-                  <button onclick="addToCalendar('Xmas Carols at The Yard', 'Christmas Carols performance at The Yard Café, Palmers Green', '2025-12-13T19:30:00', '2025-12-13T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2025-12-20" style="margin-bottom: 15px;">
-                  <strong>Saturday 20th December - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2025-12-20T19:30:00', '2025-12-20T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-              <p style="margin: 10px 0 0 0; color: #ff4444; font-weight: bold;"><em>Evening will be closed from 20th Dec and reopen on 07th Jan 2026</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Christmas Supper Club December 12th 2025 Event Section -->
-      <div id="christmas-supper-club" data-event-end="2025-12-12T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">CHRISTMAS AND SUPPER CLUB WINE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 12th December 2025 - 7:00pm</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Booking poster and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/December 2025/Christmas Supper Club Booking.JPG" alt="Christmas Supper Club Booking - December 12th 2025 at The Yard Café" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">CHRISTMAS SUPPER CLUB</h3>
-            <p style="text-align: center;">Join us for a magical evening of seasonal indulgence at our Christmas Supper Club & Wine Tasting – a one-night-only celebration of fine food, expertly paired with wines to complement the meal.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£100 PER PERSON</p>
-          </div>
-          
-          <!-- Right column - Menu and event details -->
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/December 2025/Christmas Supper Club Menu.JPG" alt="Christmas Supper Club Menu at The Yard Café" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 12th December 2025</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 24px; margin-bottom: 15px; color: #d32f2f; font-weight: bold;"><strong>SOLD OUT</strong></p>
-            </div>
-            
-            <!-- Christmas Supper Club Booking Form - SOLD OUT -->
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 15px; color: #d32f2f; text-align: center; font-size: 24px;">EVENT SOLD OUT</h3>
-              <div style="text-align: center; padding: 20px; background-color: #f2f2f2; border-radius: 5px;">
-                <p style="font-size: 16px; margin: 0; font-weight: bold;">This event is now fully booked. Thank you for your interest!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- January 2026 Live Music Section -->
-      <div id="january-live-music" data-event-end="2026-01-31T22:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR JANUARY</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station - From 7:30pm onwards</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/live music jan26.jpg" alt="Live Music at The Yard - January 2026" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">JANUARY LIVE MUSIC</h3>
-            <p style="text-align: center;">Join us for live music performances every Saturday night featuring talented local artists. Free entry, no booking required.</p>
-          </div>
-          
-          <!-- Right column - Event details -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-01-10" style="margin-bottom: 15px;">
-                  <strong>Saturday 10th January - Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music performance by Tom Benson at The Yard Café, Palmers Green', '2026-01-10T19:30:00', '2026-01-10T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-01-17" style="margin-bottom: 15px;">
-                  <strong>Saturday 17th January - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-01-17T19:30:00', '2026-01-17T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-01-24" style="margin-bottom: 15px;">
-                  <strong>Saturday 24th January - Private Event</strong>
-                </li>
-                <li data-event-date="2026-01-31" style="margin-bottom: 15px;">
-                  <strong>Saturday 31st January - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-01-31T19:30:00', '2026-01-31T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- February 2026 Live Music Section -->
-      <div id="february-live-music" data-event-end="2026-02-28T22:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR FEBRUARY</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station - From 7:30pm onwards</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="images/evening/2026-February-Live-Music.png" alt="Live Music at The Yard - February 2026" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">FEBRUARY LIVE MUSIC</h3>
-            <p style="text-align: center;">Join us for live music performances every Saturday night featuring talented local artists. Free entry, no booking required.</p>
-          </div>
-          
-          <!-- Right column - Event details -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-02-07" style="margin-bottom: 15px;">
-                  <strong>Saturday 7th February - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-02-07T19:30:00', '2026-02-07T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-02-14" style="margin-bottom: 15px;">
-                  <strong>Saturday 14th February - Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music performance by Tom Benson at The Yard Café, Palmers Green', '2026-02-14T19:30:00', '2026-02-14T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-02-21" style="margin-bottom: 15px;">
-                  <strong>Saturday 21st February - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-02-21T19:30:00', '2026-02-21T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-02-28" style="margin-bottom: 15px;">
-                  <strong>Saturday 28th February - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-02-28T19:30:00', '2026-02-28T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Wine Tasting 'Tour de France' February 26th 2026 Event Section -->
-      <div id="february-wine-tasting-tour-de-france" data-event-end="2026-02-26T22:00:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">WINE TASTING 'TOUR DE FRANCE'</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Thursday 26th February 2026 - 7:00pm</p>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="images/evening/2026-February-26-Wine Tasting.png" alt="Wine Tasting 'Tour de France' - February 26th 2026 at The Yard Café" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">WINE TASTING 'TOUR DE FRANCE'</h3>
-            <p style="text-align: center;">Discovering wines from different regions of France with wine expert Melchior de Seze. A delicious 7 wine journey served with a selection of cheeses, smoked salmon and charcuterie.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£55 PER PERSON</p>
-          </div>
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Thursday 26th February 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£55 PER PERSON</p>
-            </div>
-            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
-              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
-            </div>
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">Palmers Green Railway Station<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- March 2026 Live Music Section -->
-      <div id="march-live-music" data-event-end="2026-03-21T22:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR MARCH</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station, Aldermans Hill N13 4PN - From 7:30pm onwards</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/Mar26/March26.png" alt="Live Music March at The Yard Café - March 2026" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">LIVE MUSIC MARCH</h3>
-            <p style="text-align: center;">Join us for live music performances featuring Tom Benson and Maurice Judge. Free entry, no booking required. Contact: 0208 886 6884</p>
-          </div>
-          
-          <!-- Right column - Event details -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-03-07" style="margin-bottom: 15px;">
-                  <strong>Saturday 7th March - Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music performance by Tom Benson at The Yard Café, Palmers Green', '2026-03-07T19:30:00', '2026-03-07T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-03-14" style="margin-bottom: 15px;">
-                  <strong>Saturday 14th March - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-03-14T19:30:00', '2026-03-14T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-03-21" style="margin-bottom: 15px;">
-                  <strong>Saturday 21st March - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-03-21T19:30:00', '2026-03-21T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')" 
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bordeaux vs Burgundy Wine Tasting March 26th 2026 Event Section -->
-      <div id="march-wine-tasting-bordeaux-burgundy" data-event-end="2026-03-26T22:00:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">BORDEAUX VS BURGUNDY WINE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Thursday 26th March 2026 - 7:00pm</p>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="images/evening/2026-March-26-Wine Tasting.png" alt="Bordeaux vs Burgundy Wine Tasting - March 26th 2026 at The Yard Café" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">BORDEAUX VS BURGUNDY WINE TASTING</h3>
-            <p style="text-align: center;">Discover France's best wine regions with wine expert Melchior de Seze. A delicious 6 wine journey served with a selection of cheeses and charcuterie.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£65 PER PERSON</p>
-          </div>
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Thursday 26th March 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 24px; margin-bottom: 15px; color: #d32f2f; font-weight: bold;"><strong>SOLD OUT</strong></p>
-            </div>
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 15px; color: #d32f2f; text-align: center; font-size: 24px;">EVENT SOLD OUT</h3>
-              <div style="text-align: center; padding: 20px; background-color: #f2f2f2; border-radius: 5px;">
-                <p style="font-size: 16px; margin: 0; font-weight: bold;">This event is now fully booked. Thank you for your interest!</p>
-              </div>
-            </div>
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">Palmers Green Railway Station<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- April 2026 Live Music Section -->
-      <div id="april-live-music" data-event-end="2026-04-25T22:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR APRIL</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station, Aldermans Hill N13 4PN - From 7:30pm onwards</p>
-        </div>
-        
-        <!-- Desktop 2-column layout, mobile stacked -->
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <!-- Left column - Image and description -->
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/April26/the-yard-cafe-live-music.jpeg" alt="Live Music at The Yard Café - April 2026" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">LIVE MUSIC APRIL</h3>
-            <p style="text-align: center;">Join us for live music performances featuring Maurice Judge and Tom Benson. Free entry, no booking required. Contact: 0208 886 6884</p>
-          </div>
-          
-          <!-- Right column - Event details -->
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-04-04" style="margin-bottom: 15px;">
-                  <strong>Saturday 4th April - Closed</strong>
-                </li>
-                <li data-event-date="2026-04-11" style="margin-bottom: 15px;">
-                  <strong>Saturday 11th April - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-04-11T19:30:00', '2026-04-11T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-04-18" style="margin-bottom: 15px;">
-                  <strong>Saturday 18th April - Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music performance by Tom Benson at The Yard Café, Palmers Green', '2026-04-18T19:30:00', '2026-04-18T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-04-25" style="margin-bottom: 15px;">
-                  <strong>Saturday 25th April - Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music performance by Maurice Judge at The Yard Café, Palmers Green', '2026-04-25T19:30:00', '2026-04-25T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Italian Wine Tasting April 24th 2026 Event Section -->
-      <div id="april-italian-wine-tasting" data-event-end="2026-04-24T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">ITALIAN WINE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 24th April 2026 - 7:00pm</p>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/April26/italian-wine-tasting-april-24.png" alt="Italian Wine Tasting - Friday 24th April 2026 at The Yard Café, Palmers Green" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;" loading="lazy">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">ITALIAN WINE TASTING</h3>
-            <p style="text-align: center;">An evening of Italian wines at The Yard Café. Grazing boards included with your ticket.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£60 PER PERSON</p>
-          </div>
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 24th April 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 24px; margin-bottom: 15px; color: #d32f2f; font-weight: bold;"><strong>SOLD OUT</strong></p>
-            </div>
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 15px; color: #d32f2f; text-align: center; font-size: 24px;">EVENT SOLD OUT</h3>
-              <div style="text-align: center; padding: 20px; background-color: #f2f2f2; border-radius: 5px;">
-                <p style="font-size: 16px; margin: 0; font-weight: bold;">This event is now fully booked. Thank you for your interest!</p>
-              </div>
-            </div>
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">The Yard Café, Palmers Green Railway Station<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- May 2026 Live Music Section -->
-      <div id="may-live-music" data-event-end="2026-05-23T23:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR MAY</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station, Aldermans Hill N13 4PN — from 8:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/May26/live-music-may-2026.jpeg" alt="Live Music at The Yard Café — May 2026" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">LIVE MUSIC MAY</h3>
-            <p style="text-align: center;">Live music in May with Sarah Cablis, Tom Benson, and Maurice Judge. Free entry, no booking required. Contact: 0208 886 6884</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-05-02" style="margin-bottom: 15px;">
-                  <strong>Saturday 2nd May — Sarah Cablis</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Sarah Cablis', 'Live music at The Yard Café, Palmers Green', '2026-05-02T20:00:00', '2026-05-02T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-05-09" style="margin-bottom: 15px;">
-                  <strong>Saturday 9th May — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-05-09T20:00:00', '2026-05-09T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-05-16" style="margin-bottom: 15px;">
-                  <strong>Saturday 16th May — Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music at The Yard Café, Palmers Green', '2026-05-16T20:00:00', '2026-05-16T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-05-23" style="margin-bottom: 15px;">
-                  <strong>Saturday 23rd May — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-05-23T20:00:00', '2026-05-23T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- May 22 2026 — Unusual wine countries (Cognito form 82) -->
-      <div id="may-wine-tasting-unusual-countries" data-event-end="2026-05-22T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">WINE TASTING — UNUSUAL WINE PRODUCING COUNTRIES</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 22nd May 2026 — 7:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/May26/wine-tasting-may-22-2026.png" alt="Wine tasting — red and white from unusual wine producing countries, May 22nd 2026 at The Yard Café" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">RED &amp; WHITE — UNUSUAL WINE COUNTRIES</h3>
-            <p style="text-align: center;">An evening of red and white wines from unexpected corners of the wine world, hosted at The Yard Café. Grazing food boards are included with your ticket.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£60 PER PERSON</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 22nd May 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£60 PER PERSON</p>
-            </div>
-
-            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
-              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
-            </div>
-
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">The Yard Café, Palmers Green Railway Station<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- June 2026 Live Music Section -->
-      <div id="june-live-music" data-event-end="2026-06-27T23:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR JUNE</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station, Aldermans Hill N13 4PN — from 8:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/Jun26/live-music-June26.png" alt="Live Music at The Yard Café — June 2026" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">LIVE MUSIC JUNE</h3>
-            <p style="text-align: center;">Live music in June with Tom Benson and Maurice Judge. Free entry, no booking required. Contact: 0208 886 6884</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-06-06" style="margin-bottom: 15px;">
-                  <strong>Saturday 6th June — Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music at The Yard Café, Palmers Green', '2026-06-06T20:00:00', '2026-06-06T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-06-13" style="margin-bottom: 15px;">
-                  <strong>Saturday 13th June — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-06-13T20:00:00', '2026-06-13T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-06-20" style="margin-bottom: 15px;">
-                  <strong>Saturday 20th June — Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music at The Yard Café, Palmers Green', '2026-06-20T20:00:00', '2026-06-20T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-06-27" style="margin-bottom: 15px;">
-                  <strong>Saturday 27th June — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-06-27T20:00:00', '2026-06-27T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- June 26 2026 — Sparkling and Champagne (Cognito form 85) -->
-      <div id="june-sparkling-champagne-tasting" data-event-end="2026-06-26T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">SPARKLING AND CHAMPAGNE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 26th June 2026 — 7:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/Jun26/sparkling-champagne-june-26-2026.png" alt="Sparkling and Champagne Tasting, Friday 26th June 2026 at The Yard Café" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">SPARKLING &amp; CHAMPAGNE</h3>
-            <p style="text-align: center;">A sparkling and champagne tasting evening at The Yard Café. Grazing food boards are included with your ticket.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£80 PER PERSON</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 26th June 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£80 PER PERSON</p>
-            </div>
-
-            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
-              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
-            </div>
-
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">The Yard Café, Palmers Green<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- July 2026 Live Music Section -->
-      <div id="july-live-music" data-event-end="2026-07-25T23:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR JULY</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station, Aldermans Hill N13 4PN — from 8:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/July26/LiveMusic-Jly2026.png" alt="Live Music at The Yard Café — July 2026" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">LIVE MUSIC JULY</h3>
-            <p style="text-align: center;">Live music in July with Jessie Pie, Maurice Judge, and Tom Benson. Free entry, no booking required. Contact: 0208 886 6884</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-07-04" style="margin-bottom: 15px;">
-                  <strong>Saturday 4th July — Jessie Pie</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Jessie Pie', 'Live music at The Yard Café, Palmers Green', '2026-07-04T20:00:00', '2026-07-04T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-07-11" style="margin-bottom: 15px;">
-                  <strong>Saturday 11th July — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-07-11T20:00:00', '2026-07-11T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-07-18" style="margin-bottom: 15px;">
-                  <strong>Saturday 18th July — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-07-18T20:00:00', '2026-07-18T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-07-25" style="margin-bottom: 15px;">
-                  <strong>Saturday 25th July — Tom Benson</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Tom Benson', 'Live music at The Yard Café, Palmers Green', '2026-07-25T20:00:00', '2026-07-25T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="margin: 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- July 17 2026 — Around the World Wine Tasting (Cognito form TBC — was wrongly using form 86 / Tour d'Italia) -->
-      <div id="july-around-the-world-wine-tasting" data-event-end="2026-07-17T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">AROUND THE WORLD WINE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 17th July 2026 — 7:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/July26/Around-the-world-wine-tasing-july2026.png" alt="Around the World Wine Tasting, Friday 17th July 2026 at The Yard Café" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">AROUND THE WORLD WINE TASTING</h3>
-            <p style="text-align: center;">An around-the-world wine tasting evening at The Yard Café. Grazing food boards are included with your ticket.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£60 PER PERSON</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 17th July 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£60 PER PERSON</p>
-            </div>
-
-            <div style="padding-top: 20px; border-top: 1px solid #ddd; text-align: center;">
-              <p style="margin-bottom: 10px;">Online booking form coming soon.</p>
-              <p style="margin: 0;">To book, call <a href="tel:02088866884" style="color: #848614; font-weight: bold;">0208 886 6884</a></p>
-            </div>
-
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">The Yard Café, Palmers Green Railway Station<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- August 2026 Live Music Section -->
-      <div id="august-live-music" data-event-end="2026-08-15T23:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">LIVE MUSIC FOR AUGUST</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Palmers Green Railway Station, Aldermans Hill N13 4PN — from 8:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <a href="https://www.instagram.com/theyardcafelondon/" target="_blank" rel="noopener">
-              <img src="events/July26/LiveMusic-Aug2026.png" alt="Live Music at The Yard Café — August 2026" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            </a>
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">LIVE MUSIC AUGUST</h3>
-            <p style="text-align: center;">Live music in August with Maurice Judge and Jessie Pie. Free entry, no booking required. Contact: 0208 886 6884</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="margin-bottom: 20px;">
-              <ul style="margin-top: 10px; padding-left: 20px;">
-                <li data-event-date="2026-08-01" style="margin-bottom: 15px;">
-                  <strong>Saturday 1st August — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-08-01T20:00:00', '2026-08-01T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-08-08" style="margin-bottom: 15px;">
-                  <strong>Saturday 8th August — Jessie Pie</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Jessie Pie', 'Live music at The Yard Café, Palmers Green', '2026-08-08T20:00:00', '2026-08-08T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-                <li data-event-date="2026-08-15" style="margin-bottom: 15px;">
-                  <strong>Saturday 15th August — Maurice Judge</strong>
-                  <br>
-                  <button onclick="addToCalendar('Live Music - Maurice Judge', 'Live music at The Yard Café, Palmers Green', '2026-08-15T20:00:00', '2026-08-15T22:00:00', 'The Yard Café, Palmers Green Station, Aldermans Hill, London N13 4PN')"
-                          style="margin-top: 5px; padding: 5px 10px; background-color: #848614; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
-                    Add to Calendar
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <div style="text-align: center; padding: 15px; background-color: #fff3cd; border-radius: 5px; border: 1px solid #ffc107;">
-              <p style="margin: 0 0 10px 0; font-weight: bold; color: #848614;"><em>Free entry, no booking required</em></p>
-              <p style="margin: 0; font-weight: bold; color: #d32f2f;">We close from 16th August till 31st August</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <!-- Free live music stays hardcoded (not in the ticketed UNE feed) -->
+      <div id="live-music">
       <!-- September 2026 Live Music Section -->
       <div id="september-live-music" data-event-end="2026-09-26T23:00:00" data-remove-when-empty="true" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
         <div style="text-align: center; margin-bottom: 20px;">
@@ -1774,80 +812,6 @@
           </div>
         </div>
       </div>
-
-      <!-- September 25 2026 — Tour de France Wine Tasting (Cognito form 88) -->
-      <div id="september-tour-de-france-wine-tasting" data-event-end="2026-09-25T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">TOUR DE FRANCE WINE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 25th September 2026 — 7:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/Sep-oct-26/tour de france wine tasting.jpeg" alt="Tour de France Wine Tasting, Friday 25th September 2026 at The Yard Café, Palmers Green" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">TOUR DE FRANCE WINE TASTING</h3>
-            <p style="text-align: center;">Discover wines from across France with wine expert Melchior de Seze. Grazing food boards are included with your ticket.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£60 PER PERSON</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 25th September 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 24px; margin-bottom: 15px; color: #d32f2f; font-weight: bold;"><strong>SOLD OUT</strong></p>
-            </div>
-
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 15px; color: #d32f2f; text-align: center; font-size: 24px;">EVENT SOLD OUT</h3>
-              <div style="text-align: center; padding: 20px; background-color: #f2f2f2; border-radius: 5px;">
-                <p style="font-size: 16px; margin: 0; font-weight: bold;">This event is now fully booked. Thank you for your interest!</p>
-              </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">The Yard Café, Palmers Green Railway Station<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- October 23 2026 — Tour d'Italia Wine Tasting (Cognito form 86) -->
-      <div id="october-tour-d-italia-wine-tasting" data-event-end="2026-10-23T22:30:00" style="margin: 30px 0; background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h2 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px;">TOUR D'ITALIA WINE TASTING</h2>
-          <p style="font-size: 18px; margin-bottom: 15px;">Friday 23rd October 2026 — 7:00pm</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-          <div style="flex: 1; min-width: 300px;">
-            <img src="events/Sep-oct-26/tour d italia wine tasting .jpeg" alt="Tour d'Italia Wine Tasting, Friday 23rd October 2026 at The Yard Café, Palmers Green" loading="lazy" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
-            <h3 style="font-family: 'Bebas Neue', sans-serif; margin-bottom: 10px; color: #848614; text-align: center;">TOUR D'ITALIA WINE TASTING</h3>
-            <p style="text-align: center;">Explore Italian wines region by region with wine expert Melchior de Seze. Grazing food boards are included with your ticket.</p>
-            <p style="text-align: center; font-weight: bold; color: #848614; font-size: 18px; margin-top: 15px;">£60 PER PERSON</p>
-          </div>
-
-          <div style="flex: 1; min-width: 300px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>Friday 23rd October 2026</strong></p>
-              <p style="font-size: 16px; margin-bottom: 10px;"><strong>7:00pm start</strong></p>
-              <p style="font-size: 18px; margin-bottom: 15px; color: #848614; font-weight: bold;">£60 PER PERSON</p>
-            </div>
-
-            <div style="padding-top: 20px; border-top: 1px solid #ddd;">
-              <!-- iframe + allow="payment" required for Stripe card / wallet fields -->
-              <iframe src="https://www.cognitoforms.com/f/nra8M7-W5EyCgKiqoaohEw/86" allow="payment" style="border:0;width:100%;" height="845"></iframe>
-              <script src="https://www.cognitoforms.com/f/iframe.js"></script>
-            </div>
-
-            <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
-              <p style="font-size: 14px; margin-bottom: 10px;"><strong>Location:</strong></p>
-              <p style="font-size: 14px; margin-bottom: 10px;">The Yard Café, Palmers Green Railway Station<br>Aldermans Hill, London N13 4PN</p>
-              <p style="font-size: 14px; margin-bottom: 5px;"><strong>Contact:</strong> 0208 886 6884</p>
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -1923,6 +887,142 @@
   <script src="js/activate-animations.js" type="text/javascript"></script>
   <script src="js/local-events.js" type="text/javascript"></script>
   <script src="js/event-filtering.js" type="text/javascript"></script>
+  <!-- UrNextEvent — one script for all data-une-organiser / data-une-event widgets -->
+  <script src="https://urnextevent.com/embed.js" defer></script>
+  <script>
+    // UrNextEvent uses open Shadow DOM — inject Yard Café fonts + Live Music–like card layout.
+    (function () {
+      var UNE_STYLE_CSS =
+        ":host,.une{font-family:'Source Sans Pro',system-ui,sans-serif!important}" +
+        /* Page heading (Upcoming events) — match LIVE MUSIC FOR SEPTEMBER h2 */
+        ".heading{" +
+          "font-family:'Bebas Neue',sans-serif!important;" +
+          "font-size:42px!important;" +
+          "font-weight:400!important;" +
+          "letter-spacing:.02em!important;" +
+          "line-height:1.1!important;" +
+          "color:#1a1a1a!important;" +
+          "text-transform:uppercase!important;" +
+          "text-align:center!important;" +
+          "margin:0 0 20px!important" +
+        "}" +
+        ".month{" +
+          "font-family:'Source Sans Pro',system-ui,sans-serif!important;" +
+          "font-size:18px!important;" +
+          "letter-spacing:.06em!important;" +
+          "text-align:center!important;" +
+          "margin:0 0 16px!important;" +
+          "color:#333!important" +
+        "}" +
+        /* Card shell — same grey block feel as live music sections */
+        ".card{" +
+          "background:#f2f2f2!important;" +
+          "border:1px solid #ddd!important;" +
+          "border-radius:5px!important;" +
+          "overflow:hidden!important;" +
+          "margin:0 0 30px!important" +
+        "}" +
+        /* Split layout ~50/50 like Live Music poster + details */
+        ".card.split{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}" +
+        "@media(min-width:768px){" +
+          ".card.split{flex-direction:row!important;align-items:flex-start!important;gap:30px!important;padding:20px!important}" +
+          ".card.split .img-col{" +
+            "width:48%!important;" +
+            "max-width:none!important;" +
+            "min-height:0!important;" +
+            "background:transparent!important;" +
+            "align-items:flex-start!important;" +
+            "justify-content:center!important" +
+          "}" +
+          ".card.split .img{" +
+            "height:auto!important;" +
+            "min-height:0!important;" +
+            "max-height:none!important;" +
+            "width:100%!important;" +
+            "object-fit:contain!important;" +
+            "border-radius:5px!important;" +
+            "background:transparent!important" +
+          "}" +
+          ".card.split .card-body{padding:0!important;flex:1!important}" +
+        "}" +
+        ".card.split .img-col{background:transparent!important}" +
+        ".card.split .img{object-fit:contain!important;background:transparent!important;border-radius:5px!important}" +
+        ".card-body{padding:20px!important}" +
+        /* Event title — Bebas Neue like LIVE MUSIC SEPTEMBER h3 */
+        ".title{" +
+          "font-family:'Bebas Neue',sans-serif!important;" +
+          "font-size:32px!important;" +
+          "font-weight:400!important;" +
+          "letter-spacing:.02em!important;" +
+          "line-height:1.15!important;" +
+          "color:#848614!important;" +
+          "text-transform:uppercase!important;" +
+          "margin:0 0 12px!important" +
+        "}" +
+        ".meta{" +
+          "font-family:'Source Sans Pro',system-ui,sans-serif!important;" +
+          "font-size:16px!important;" +
+          "font-weight:700!important;" +
+          "color:#1a1a1a!important;" +
+          "margin:0 0 8px!important" +
+        "}" +
+        ".desc,.muted{" +
+          "font-family:'Source Sans Pro',system-ui,sans-serif!important;" +
+          "font-size:16px!important;" +
+          "line-height:1.5!important;" +
+          "color:#333!important;" +
+          "margin:0 0 12px!important" +
+        "}" +
+        ".price{" +
+          "font-family:'Bebas Neue',sans-serif!important;" +
+          "font-size:22px!important;" +
+          "font-weight:400!important;" +
+          "letter-spacing:.03em!important;" +
+          "color:#848614!important;" +
+          "margin:0 0 16px!important" +
+        "}" +
+        /* Book button — Yard Café olive instead of orange/pink gradient */
+        ".btn{" +
+          "font-family:'Bebas Neue',sans-serif!important;" +
+          "letter-spacing:.06em!important;" +
+          "font-size:18px!important;" +
+          "font-weight:400!important;" +
+          "background:#848614!important;" +
+          "border-radius:3px!important;" +
+          "padding:12px 16px!important" +
+        "}" +
+        ".btn:hover{background:#6f7010!important}" +
+        ".sold,.qty,label,.err,.status,.foot,.check," +
+        "input[type=text],input[type=email]{font-family:'Source Sans Pro',system-ui,sans-serif!important}" +
+        ".foot{margin-top:8px!important}";
+
+      function styleUneHost(host) {
+        if (!host || !host.shadowRoot) return;
+        if (!host.shadowRoot.querySelector(".une, .status, .card")) return;
+        var existing = host.shadowRoot.querySelector("style[data-yard-une-fonts]");
+        if (existing) {
+          existing.textContent = UNE_STYLE_CSS;
+        } else {
+          var style = document.createElement("style");
+          style.setAttribute("data-yard-une-fonts", "1");
+          style.textContent = UNE_STYLE_CSS;
+          host.shadowRoot.appendChild(style);
+        }
+        host.setAttribute("data-une-fonted", "1");
+      }
+
+      function styleAll() {
+        document.querySelectorAll("[data-une-event],[data-une-organiser]").forEach(styleUneHost);
+      }
+
+      var observer = new MutationObserver(styleAll);
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+      styleAll();
+      [500, 1500, 3000, 6000].forEach(function (ms) {
+        setTimeout(styleAll, ms);
+      });
+    })();
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
