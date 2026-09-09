@@ -741,12 +741,12 @@
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 
       <!-- Ticketed / wine / supper events: auto-updated from UrNextEvent -->
-      <div id="upcoming-events" style="margin: 40px 0 30px;">
+      <div id="upcoming-events" style="margin: 40px 0 30px; width: 100%; max-width: 100%; overflow-x: hidden; box-sizing: border-box;">
         <div
           data-une-organiser="the-yard"
           data-une-heading="Upcoming events"
           data-une-layout="split"
-          style="width:100%;max-width:100%;">
+          style="width:100%;max-width:100%;display:block;">
         </div>
       </div>
 
@@ -890,111 +890,180 @@
   <!-- UrNextEvent — one script for all data-une-organiser / data-une-event widgets -->
   <script src="https://urnextevent.com/embed.js" defer></script>
   <script>
-    // UrNextEvent uses open Shadow DOM — inject Yard Café fonts + Live Music–like card layout.
+    // UrNextEvent uses open Shadow DOM — inject Yard Café fonts + responsive Live Music–like layout.
     (function () {
       var UNE_STYLE_CSS =
-        ":host,.une{font-family:'Source Sans Pro',system-ui,sans-serif!important}" +
-        /* Page heading (Upcoming events) — match LIVE MUSIC FOR SEPTEMBER h2 */
+        ":host{" +
+          "all:initial;" +
+          "display:block!important;" +
+          "width:100%!important;" +
+          "max-width:100%!important;" +
+          "box-sizing:border-box!important;" +
+          "overflow-x:hidden!important" +
+        "}" +
+        ".une{" +
+          "font-family:'Source Sans Pro',system-ui,sans-serif!important;" +
+          "display:block!important;" +
+          "width:100%!important;" +
+          "max-width:100%!important;" +
+          "box-sizing:border-box!important;" +
+          "overflow-x:hidden!important" +
+        "}" +
+        "*,*::before,*::after{box-sizing:border-box!important}" +
+        /* Headings */
         ".heading{" +
           "font-family:'Bebas Neue',sans-serif!important;" +
-          "font-size:42px!important;" +
+          "font-size:clamp(28px,6vw,42px)!important;" +
           "font-weight:400!important;" +
           "letter-spacing:.02em!important;" +
           "line-height:1.1!important;" +
           "color:#1a1a1a!important;" +
           "text-transform:uppercase!important;" +
           "text-align:center!important;" +
-          "margin:0 0 20px!important" +
+          "margin:0 0 16px!important;" +
+          "padding:0 8px!important" +
         "}" +
         ".month{" +
           "font-family:'Source Sans Pro',system-ui,sans-serif!important;" +
-          "font-size:18px!important;" +
+          "font-size:clamp(14px,3.5vw,18px)!important;" +
           "letter-spacing:.06em!important;" +
           "text-align:center!important;" +
-          "margin:0 0 16px!important;" +
+          "margin:0 0 14px!important;" +
           "color:#333!important" +
         "}" +
-        /* Card shell — same grey block feel as live music sections */
+        /* Card shell */
         ".card{" +
-          "background:#f2f2f2!important;" +
+          "background:#fff!important;" +
           "border:1px solid #ddd!important;" +
           "border-radius:5px!important;" +
           "overflow:hidden!important;" +
-          "margin:0 0 30px!important" +
+          "margin:0 0 24px!important;" +
+          "width:100%!important;" +
+          "max-width:100%!important" +
         "}" +
-        /* Split layout ~50/50 like Live Music poster + details */
-        ".card.split{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}" +
+        /* Mobile-first: stacked poster above details (matches Live Music on small screens) */
+        ".card.split{" +
+          "display:flex!important;" +
+          "flex-direction:column!important;" +
+          "align-items:stretch!important;" +
+          "gap:0!important;" +
+          "padding:16px!important" +
+        "}" +
+        ".card.split .img-col{" +
+          "display:flex!important;" +
+          "width:100%!important;" +
+          "max-width:none!important;" +
+          "min-height:0!important;" +
+          "flex-shrink:0!important;" +
+          "background:transparent!important;" +
+          "align-items:center!important;" +
+          "justify-content:center!important;" +
+          "margin:0 0 16px!important" +
+        "}" +
+        ".card.split .img{" +
+          "display:block!important;" +
+          "width:100%!important;" +
+          "max-width:100%!important;" +
+          "height:auto!important;" +
+          "min-height:0!important;" +
+          "max-height:none!important;" +
+          "object-fit:contain!important;" +
+          "border-radius:5px!important;" +
+          "background:transparent!important" +
+        "}" +
+        ".card-body{" +
+          "padding:0!important;" +
+          "flex:1!important;" +
+          "min-width:0!important;" +
+          "width:100%!important" +
+        "}" +
+        /* Kill UNE's early 540px side-by-side so phones/tablets stay stacked */
+        "@media(max-width:767px){" +
+          ".card.split{flex-direction:column!important}" +
+          ".card.split .img-col{width:100%!important;max-width:none!important;min-height:0!important}" +
+          ".card.split .img{height:auto!important;min-height:0!important;max-height:none!important;width:100%!important}" +
+          ".title{font-size:clamp(24px,7vw,32px)!important}" +
+          ".meta,.desc,.muted{font-size:15px!important}" +
+          ".btn{width:100%!important}" +
+        "}" +
+        /* Desktop / large tablet: Live Music–style ~50/50 split */
         "@media(min-width:768px){" +
-          ".card.split{flex-direction:row!important;align-items:flex-start!important;gap:30px!important;padding:20px!important}" +
+          ".card.split{" +
+            "flex-direction:row!important;" +
+            "align-items:flex-start!important;" +
+            "gap:30px!important;" +
+            "padding:20px!important;" +
+            "background:#f2f2f2!important" +
+          "}" +
           ".card.split .img-col{" +
             "width:48%!important;" +
-            "max-width:none!important;" +
-            "min-height:0!important;" +
-            "background:transparent!important;" +
-            "align-items:flex-start!important;" +
-            "justify-content:center!important" +
+            "max-width:520px!important;" +
+            "margin:0!important" +
           "}" +
           ".card.split .img{" +
-            "height:auto!important;" +
-            "min-height:0!important;" +
-            "max-height:none!important;" +
             "width:100%!important;" +
-            "object-fit:contain!important;" +
-            "border-radius:5px!important;" +
-            "background:transparent!important" +
+            "height:auto!important" +
           "}" +
-          ".card.split .card-body{padding:0!important;flex:1!important}" +
+          ".card-body{padding:0!important}" +
+          ".title{font-size:32px!important}" +
+          ".btn{width:auto!important;min-width:220px!important}" +
         "}" +
-        ".card.split .img-col{background:transparent!important}" +
-        ".card.split .img{object-fit:contain!important;background:transparent!important;border-radius:5px!important}" +
-        ".card-body{padding:20px!important}" +
-        /* Event title — Bebas Neue like LIVE MUSIC SEPTEMBER h3 */
+        /* Event title */
         ".title{" +
           "font-family:'Bebas Neue',sans-serif!important;" +
-          "font-size:32px!important;" +
+          "font-size:clamp(24px,5vw,32px)!important;" +
           "font-weight:400!important;" +
           "letter-spacing:.02em!important;" +
           "line-height:1.15!important;" +
           "color:#848614!important;" +
           "text-transform:uppercase!important;" +
-          "margin:0 0 12px!important" +
+          "margin:0 0 12px!important;" +
+          "word-wrap:break-word!important;" +
+          "overflow-wrap:anywhere!important" +
         "}" +
         ".meta{" +
           "font-family:'Source Sans Pro',system-ui,sans-serif!important;" +
           "font-size:16px!important;" +
           "font-weight:700!important;" +
           "color:#1a1a1a!important;" +
-          "margin:0 0 8px!important" +
+          "margin:0 0 8px!important;" +
+          "word-wrap:break-word!important" +
         "}" +
         ".desc,.muted{" +
           "font-family:'Source Sans Pro',system-ui,sans-serif!important;" +
           "font-size:16px!important;" +
           "line-height:1.5!important;" +
           "color:#333!important;" +
-          "margin:0 0 12px!important" +
+          "margin:0 0 12px!important;" +
+          "word-wrap:break-word!important" +
         "}" +
         ".price{" +
           "font-family:'Bebas Neue',sans-serif!important;" +
-          "font-size:22px!important;" +
+          "font-size:clamp(18px,4vw,22px)!important;" +
           "font-weight:400!important;" +
           "letter-spacing:.03em!important;" +
           "color:#848614!important;" +
-          "margin:0 0 16px!important" +
+          "margin:0 0 16px!important;" +
+          "text-transform:uppercase!important" +
         "}" +
-        /* Book button — Yard Café olive instead of orange/pink gradient */
         ".btn{" +
           "font-family:'Bebas Neue',sans-serif!important;" +
           "letter-spacing:.06em!important;" +
-          "font-size:18px!important;" +
+          "font-size:clamp(16px,4vw,18px)!important;" +
           "font-weight:400!important;" +
           "background:#848614!important;" +
           "border-radius:3px!important;" +
-          "padding:12px 16px!important" +
+          "padding:12px 16px!important;" +
+          "width:100%!important;" +
+          "max-width:100%!important;" +
+          "text-transform:uppercase!important;" +
+          "display:inline-flex!important" +
         "}" +
         ".btn:hover{background:#6f7010!important}" +
         ".sold,.qty,label,.err,.status,.foot,.check," +
-        "input[type=text],input[type=email]{font-family:'Source Sans Pro',system-ui,sans-serif!important}" +
-        ".foot{margin-top:8px!important}";
+        "input[type=text],input[type=email]{font-family:'Source Sans Pro',system-ui,sans-serif!important;max-width:100%!important}" +
+        ".foot{margin-top:8px!important;text-align:center!important}" +
+        ".row{flex-wrap:wrap!important}";
 
       function styleUneHost(host) {
         if (!host || !host.shadowRoot) return;
