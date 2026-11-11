@@ -1013,6 +1013,11 @@
           style.textContent = UNE_STYLE_CSS;
           host.shadowRoot.appendChild(style);
         }
+        host.shadowRoot.querySelectorAll("h3.title").forEach(function (node) {
+          if (node.textContent === "Live Music October") {
+            node.textContent = "Live Music November";
+          }
+        });
         host.setAttribute("data-une-fonted", "1");
       }
 
