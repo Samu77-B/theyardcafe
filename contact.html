@@ -205,6 +205,56 @@
           5 pm - 11 pm</p>
         </div>
       </div>
+
+      <div class="contact-form-container">
+        <h3 class="heading-4">Send a message</h3>
+        <div class="success-message" data-fs-success>Thanks for getting in touch. We'll reply as soon as we can.</div>
+        <div class="error-message" data-fs-error></div>
+
+        <form id="contact-form" class="contact-form">
+          <input type="hidden" name="_subject" value="New message from The Yard Café website">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -5000px;">
+
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Name</label>
+            <input class="form-input" type="text" id="contact-name" name="name" data-fs-field required>
+            <span data-fs-error="name"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email</label>
+            <input class="form-input" type="email" id="contact-email" name="email" data-fs-field required>
+            <span data-fs-error="email"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-phone">Phone</label>
+            <input class="form-input" type="tel" id="contact-phone" name="phone" data-fs-field>
+            <span data-fs-error="phone"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-location">Location</label>
+            <select class="form-input" id="contact-location" name="location" data-fs-field>
+              <option value="General">General</option>
+              <option value="Palmers Green">Palmers Green</option>
+              <option value="Alexandra Palace">Alexandra Palace</option>
+              <option value="Venue hire">Venue hire</option>
+            </select>
+            <span data-fs-error="location"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea class="form-textarea" id="contact-message" name="message" data-fs-field required></textarea>
+            <span data-fs-error="message"></span>
+          </div>
+
+          <div class="form-button-wrapper">
+            <button class="submit-button" type="submit" data-fs-submit-btn>Send</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   
@@ -312,21 +362,13 @@
   <script>
     $(document).ready(function() {
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
-      
-      // The form will be handled by FormSubmit.co service
-      // We're keeping minimal JavaScript for form validation and UX
-      $('#contact-form').submit(function() {
-        // Form will be submitted to FormSubmit.co
-        // No need to prevent default behavior as we want the form to submit
-        
-        // You could add additional client-side validation here if needed
-        console.log('Form submitted to FormSubmit.co');
-        
-        // The page will be redirected to the _next URL specified in the form
-        // So we don't need to manually show success messages here
-      });
     });
   </script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contact-form', formId: 'xjywpwqp' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
