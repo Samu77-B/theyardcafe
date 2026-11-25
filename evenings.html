@@ -750,6 +750,100 @@
         </div>
       </div>
 
+      <div class="festive-supper" id="festive-supper-club">
+        <div class="festive-supper__card">
+          <div class="festive-supper__poster">
+            <img src="events/festive-supper-club-19.png" alt="19th Festive Supper Club">
+          </div>
+          <div class="festive-supper__body">
+            <h3 class="festive-supper__title">Festive Supper Club</h3>
+            <p class="festive-supper__date">19 December</p>
+            <p class="festive-supper__note">Tickets on sale soon</p>
+          </div>
+        </div>
+      </div>
+      <style>
+        .festive-supper {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 0 30px;
+          box-sizing: border-box;
+        }
+        .festive-supper__card {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 16px;
+          overflow: hidden;
+        }
+        .festive-supper__poster {
+          width: 100%;
+          margin: 0 0 16px;
+        }
+        .festive-supper__poster img {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+        }
+        .festive-supper__title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(24px, 7vw, 32px);
+          font-weight: 400;
+          letter-spacing: 0.02em;
+          line-height: 1.15;
+          color: #848614;
+          text-transform: uppercase;
+          margin: 0 0 12px;
+        }
+        .festive-supper__date {
+          font-family: 'Source Sans Pro', system-ui, sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          color: #1a1a1a;
+          margin: 0 0 8px;
+        }
+        .festive-supper__note {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(18px, 4vw, 22px);
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          color: #848614;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        @media (min-width: 768px) {
+          .festive-supper__card {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 20px;
+            background: #f2f2f2;
+          }
+          .festive-supper__poster {
+            width: 48%;
+            max-width: 520px;
+            margin: 0;
+            flex-shrink: 0;
+          }
+          .festive-supper__body {
+            flex: 1;
+            min-width: 0;
+            padding-top: 8px;
+          }
+          .festive-supper__title {
+            font-size: 32px;
+          }
+        }
+      </style>
+
     </div>
   </div>
   
